@@ -1,4 +1,4 @@
-#벽타는 개발자의 공부기록
+# 벽타는 개발자의 공부기록
 
 
 2202.09.14(수)
@@ -7,11 +7,10 @@
 1. git/github 강의(최우영강사님)
 
 - Kernel 이란?
- - 하드웨어와 응용프로그램을 이어주는 운영체제의 핵심 시스템소프트웨어
+   - 하드웨어와 응용프로그램을 이어주는 운영체제의 핵심 시스템소프트웨어
 
 - Shell 이란?
- - 운영체제의 커널과 사용자를 이어주는 소프트웨어
- - 예)bash, zsh 등
+   - 운영체제의 커널과 사용자를 이어주는 소프트웨어  (예)bash, zsh 등
 
 2. Shell Command
 
@@ -44,7 +43,7 @@
 - :w - write(저장)
 - :wq - write and quit(저장 후 종료)
 
-#git의 사용 과정
+## git의 사용 과정
 - git add -> git commit -> git push(origin main) 순
 - git status : 현재 상태를 표시
 - git add : working directory에서 작업한 것을 stage로 보냄
@@ -53,7 +52,7 @@
 - vi로 파일을 수정하고 add, commit, push 과정을 통해 깃허브에 반영
 - personal token 생성 및 사용
 
-#Conventional Rules
+## Conventional Rules
 - feat: 기능 개발 관련
 - fix: 오류 개선 혹은 버그 패치
 - docs: 문서화 작업
@@ -62,16 +61,16 @@
 - build: 빌드 관련
 - ci: Continuous Integration 관련
 
-##commit 할때 제목과 내용은 간략하면서도 구성을 파악하기 쉽도록 작성!
+    *commit 할때 제목과 내용은 간략하면서도 구성을 파악하기 쉽도록 작성!
 
-#.gitignore
+## .gitignore
 - vi로 작성할때 무시할 특징을 정함
 - gitignore.io에서 필요한 환경을 검색하고 해당 내용을 복사해와서 설정
 
-#숨김폴더에 대한 내용까지 확인 하는 명령어
+### 숨김폴더에 대한 내용까지 확인 하는 명령어
 - git status -uall
 
-#Branch의 개념
+## Branch의 개념
 - Branch는 말 그대로 '가지'라는 뜻
 - git branch : branch가 뭐뭐 있는지 확인
 - git branch {movie} : movie라는 branch를 생성
