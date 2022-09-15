@@ -21,7 +21,7 @@
 - rm README.txt : README 텍스트 파일을 삭제
  - remove와 delete의 차이를 구별하기!
  - remove : 해당 파일에 접근하는 방법을 삭제
- - delete : 물리적으로 삭
+ - delete : 물리적으로 삭제
 - vi readme.md : readme.md 파일 작업 실행
 - cat readme.md : readme.md 파일에 저장된 내용을 출력
 - mv readme.md ./README.txt : readme.md 파일을 README.txt파일로 옮김
