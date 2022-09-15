@@ -83,3 +83,11 @@
  - merge할때 같은 부분을 수정했다면 merge conflict 발생
   - vi를 통해 수정(내가 최종적으로 수정하고자 하는 내용으로! 오류를 표시하는 자동 기입 내용들도 삭제)
 
+## 추가로 알게 된 내용
+### - Bash에서 파일을 remove한 사항이 깃허브에 반영되지 않을 때
+- (예시) rm menus.md : menus파일을 remove
+    - git add . : 현재 상태를 stage area로 보냄
+    - git commit : stage에 보낸 것을 localrepo로 보냄
+    - git push origin main : 깃허브와 동기화<br/>
+    -> 깃허브에서도 내가 지운 항목이 삭제되어 있음. 
+
