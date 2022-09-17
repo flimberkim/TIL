@@ -15,7 +15,7 @@
 2. Shell Command
 
 - cd : change directory (디렉토리를 변경)
-- mkdir dev : dev라는 이름의 디렉토리 생성
+- mkdir dev : dev라는 이름의 디렉토리(폴더) 생성
 - touch TIL.md : 확장자md인 TIL 파일 생성
  - touch명령어로 생성 가능한 파일은 텍스트 기반 파일만 가능
 - rm README.txt : README 텍스트 파일을 삭제
@@ -25,8 +25,10 @@
 - vi readme.md : readme.md 파일 작업 실행
 - cat readme.md : readme.md 파일에 저장된 내용을 출력
 - mv readme.md ./README.txt : readme.md 파일을 README.txt파일로 옮김
+- mv 옮길파일 옮길폴더
+   - mv ../파일명 . : 상위 폴더의 파일을 현재 폴더로 이동
 
-3. Vim command
+1. Vim command
 
 - h j k l : left, down, up, right
 - i : insert mode
@@ -42,6 +44,12 @@
 - :q! - quit discarding all changes
 - :w - write(저장)
 - :wq - write and quit(저장 후 종료)
+
+## git 환경설정
+- git config -global user.name "유저네임"
+- git config -global user.email "메일주소"
+- git config -global core.eidtor "vim"
+- git config -global core.pager "cat"
 
 ## git의 사용 과정
 - git add -> git commit -> git push(origin main) 순
