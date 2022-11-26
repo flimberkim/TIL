@@ -25,7 +25,6 @@ public class PracticeJava {
                 count += daysOfMonth[i];
             }
         }
-        count = day;
 
         System.out.println(week[count%7]);
     }
