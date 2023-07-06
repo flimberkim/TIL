@@ -3,6 +3,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
+//시간복잡도 : O(N), N은 주어진 문자열의 길이
+//아이디어 : '(' 이 등장하면 +1, ')'이 등장하면 -1 더해가면서 주어진 조건에 맞는 문자열인지 확인한다.
+//자료구조 : 배열
+
 public class Main {
 
     public static void main(String[] args) throws IOException {
