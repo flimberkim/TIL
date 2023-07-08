@@ -4,6 +4,12 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 
+//시간복잡도 : O(N), N은 주어진 각 문장의 길이
+//아이디어 : '(' 또는'[' 를 만날때만 스택에 저장해준다. 
+//          그리고 해당 괄호의 쌍을 만날때마다 직전 문자가 맞게 있는지 확인하고 맞으면 빼준다.
+//          중간에 잘못되어서 처리된 경우가 아니라면 반복문 나왔을 때 스택이 비어있는지 확인한다.
+//자료구조 : 배열, 스택
+
 public class Main {
     public static void main(String[] args) throws IOException {
 
@@ -51,8 +57,3 @@ public class Main {
         System.out.println(sb);
     }
 }
-
-
-
-
-
