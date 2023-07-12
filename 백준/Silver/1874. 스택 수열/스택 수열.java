@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Array;
 import java.util.*;
+//시간복잡도 : O(N), N은 주어지는 단어의 개수
+//아이디어 : 스택을 통해 주어진 값을 찾는 연산(push, pop)을 진행한다.
+//자료구조 : 배열, 스택
 
 public class Main {
 

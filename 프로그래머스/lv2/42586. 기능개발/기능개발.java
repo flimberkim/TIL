@@ -1,4 +1,10 @@
 import java.util.*;
+
+//시간복잡도 : O(N), N은 progresses 배열의 길이
+//아이디어 : 먼저 progresses와 같은 길이의 배열을 만들고, 해당 작업이 완료될 날짜를 담은 배열을 구한다. 날짜를 담은 배열을 처음부터 돌면서 현재 값보다 더 커지는 순간으로 포인트를 옮겨가며 함께 배포 되는 작업의 개수를 구한다.
+//자료구조 : 배열
+
+
 class Solution {
     public int[] solution(int[] progresses, int[] speeds) {
         int[] answer = {};
