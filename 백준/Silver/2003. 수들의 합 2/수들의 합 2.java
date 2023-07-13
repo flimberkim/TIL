@@ -1,3 +1,9 @@
+//시간복잡도 : O(N), N은 주어진 숫자의 개수
+//아이디어 : left, right 포인터 두 개를 0에 둔다. right 포인터를 움직여가면서
+//          범위에 해당하는 숫자의 합을 target값과 비교한다.
+//          target값이면 count 해주고 right++, target값보다 작으면 right++, target값보다 크면 left++ 해준다.
+//자료구조 : 배열
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
