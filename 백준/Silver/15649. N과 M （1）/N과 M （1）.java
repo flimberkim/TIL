@@ -1,45 +1,59 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.StringTokenizer;
+import java.util.stream.IntStream;
 
 public class Main {
+    static StringBuilder sb = new StringBuilder();
+    static int[] given;
+    static boolean[] visited;
+    static int N;
+    static int M;
+    static List<Integer> arr = new ArrayList<>();
 
-    public static int[] arr;
-    public static boolean[] check;
-    public static StringBuilder sb = new StringBuilder();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+/*
+        1. 아이디어 : 주어진 배열을 돌면서 백트래킹으로 조건에 맞는 수열들을 출력한다.
+        2. 시간복잡도 : N!
+        3. 자료구조
+        - 주어진 숫자 저장 : 배열 
+        - 방문여부 체크 : 배열
+*/
 
-    public static void backtracking(int N, int M, int depth){
-        if(depth == M){
-            for(int i : arr){
-                sb.append(i).append(" ");
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        N = Integer.parseInt(st.nextToken());
+        M = Integer.parseInt(st.nextToken());
+
+        given = IntStream.rangeClosed(1, N).toArray();
+        visited = new boolean[N + 1];
+
+        backTracking(0);
+
+        System.out.println(sb.toString());
+
+    }
+
+    public static void backTracking(int depth) {
+        if (depth == M) {
+            for (int num : arr) {
+                sb.append(num).append(" ");
             }
             sb.append("\n");
             return;
         }
-        for(int i = 1; i <= N; i++){
-            if(!check[i]){
-                check[i] = true;
-                arr[depth] = i;
-                backtracking(N, M, depth+1);
-                check[i] = false;
+
+        for (int i = 0; i < given.length; i++) {
+            if (!visited[given[i]]) {
+                visited[given[i]] = true;
+                arr.add(given[i]);
+                backTracking(depth + 1);
+                visited[given[i]] = false;
+                arr.remove(arr.size() - 1);
             }
         }
-    }
-
-    public static void main(String[] args) throws IOException {
-        //1. 아이디어 : 백트래킹 재귀함수 안에서 for문 돌면서 숫자 선택(선택 여부 확인)
-        //2. 시간복잡도 : N!
-        //3. 자료구조 : 배열
-        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(input.readLine());
-        int N = Integer.parseInt(st.nextToken());
-        int M = Integer.parseInt(st.nextToken());
-
-        arr = new int[M];
-        check = new boolean[N+1];
-        backtracking(N, M, 0);
-        System.out.println(sb);
     }
 }
