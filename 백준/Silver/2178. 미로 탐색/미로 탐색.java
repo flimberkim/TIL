@@ -40,13 +40,13 @@ public class Main {
             }
         }
 
-        BFS(0, 0, 1);
+        BFS(0, 0);
 
         System.out.println(answer);
     }
 
     //x가 열, y가 행
-    public static void BFS(int startX, int startY, int count) {
+    public static void BFS(int startX, int startY) {
         int[] tempArr = {startY, startX, 1};
         searchList.add(tempArr);
         visited[startY][startX] = true;
