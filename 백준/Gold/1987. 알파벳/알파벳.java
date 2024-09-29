@@ -57,8 +57,10 @@ public class Main {
 
             if (canGo(nx, ny)) {
                 check.add(graph[ny][nx]);
+                visited[ny][nx] = true;
                 dfs(nx, ny, count + 1);
                 check.remove(graph[ny][nx]);
+                visited[ny][nx] = false;
             }
 
         }
